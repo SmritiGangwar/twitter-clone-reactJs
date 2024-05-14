@@ -1,3 +1,3 @@
 # twitter-clone-reactJs
-Twiiter feed clone
+Twitter feed clone, 
 Deployed using - Firebase
