@@ -1,0 +1,20 @@
+body{
+    --twitter-color:#50b7f5;
+    --twitter-background:#e6ecf0;
+    /* Now use these color whith global varname everywhere for twitter */
+}
+
+.app{
+    display: flex;
+    /* SideBar Feed And Wideget Go in a Row */
+
+    height: 100vh;
+    /* Border of Sidebar was not touching the bottom before */
+
+     max-width: 1350px;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 0 10px;
+}
+
+/* !!!!!!!!!!!!!! If we MAKE CHANGES IN CODE AGAIN RUN 'npm run build' again AND DEPLAY AGAIN 'firebase deploy' !!!!!!!!! */

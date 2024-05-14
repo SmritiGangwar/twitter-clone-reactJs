@@ -1,0 +1,35 @@
+.sidebarOption{
+    display: flex;  
+    /* Icons And Text Adjacent now */
+
+    align-items: center; 
+    /* Icons just in centre of text */
+
+    cursor: pointer;
+    /* When you hover cursor changes into pointer now */
+}
+
+/* need to target MAterial UI Elements and it has its own class '.MuiSvgIcon-root' for that */
+.sidebarOption > .MuiSvgIcon-root{
+    padding: 15px;
+}
+
+.sidebarOption:hover{
+    background-color: #e8f5fe;
+    border-radius: 30px;
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+
+
+
+}
+.sidebarOption > h2{
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* If you're active then color should be blue */
+.sidebarOption--active{
+    color: var(--twitter-color);
+}
