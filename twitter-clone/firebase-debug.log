@@ -1,0 +1,144 @@
+[debug] [2023-10-02T13:59:21.450Z] ----------------------------------------------------------------------
+[debug] [2023-10-02T13:59:21.452Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\smriti\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-10-02T13:59:21.453Z] CLI Version:   12.6.1
+[debug] [2023-10-02T13:59:21.453Z] Platform:      win32
+[debug] [2023-10-02T13:59:21.453Z] Node Version:  v16.16.0
+[debug] [2023-10-02T13:59:21.454Z] Time:          Mon Oct 02 2023 19:29:21 GMT+0530 (India Standard Time)
+[debug] [2023-10-02T13:59:21.454Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-02T13:59:21.536Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-02T13:59:21.537Z] > authorizing via signed-in user (smritigangwark9@gmail.com)
+[debug] [2023-10-02T13:59:21.537Z] [iam] checking project twitter-clone-a8055 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-10-02T13:59:21.539Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions [none]
+[debug] [2023-10-02T13:59:21.539Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions x-goog-quota-user=projects/twitter-clone-a8055
+[debug] [2023-10-02T13:59:21.540Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-02T13:59:23.950Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions 200
+[debug] [2023-10-02T13:59:23.952Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-02T13:59:23.956Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 [none]
+[debug] [2023-10-02T13:59:25.185Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 200
+[debug] [2023-10-02T13:59:25.186Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 {"projectId":"twitter-clone-a8055","projectNumber":"559153797939","displayName":"twitter-clone","name":"projects/twitter-clone-a8055","resources":{"hostingSite":"twitter-clone-a8055","realtimeDatabaseInstance":"twitter-clone-a8055-default-rtdb","storageBucket":"twitter-clone-a8055.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2b6096e8-4ed5-4fb1-a6ac-b996cdf17ead"}
+[debug] [2023-10-02T13:59:25.186Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 [none]
+[debug] [2023-10-02T13:59:26.053Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 200
+[debug] [2023-10-02T13:59:26.053Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 {"projectId":"twitter-clone-a8055","projectNumber":"559153797939","displayName":"twitter-clone","name":"projects/twitter-clone-a8055","resources":{"hostingSite":"twitter-clone-a8055","realtimeDatabaseInstance":"twitter-clone-a8055-default-rtdb","storageBucket":"twitter-clone-a8055.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2b6096e8-4ed5-4fb1-a6ac-b996cdf17ead"}
+[info] 
+[info] === Deploying to 'twitter-clone-a8055'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2023-10-02T13:59:26.062Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb [none]
+[debug] [2023-10-02T13:59:28.311Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb 200
+[debug] [2023-10-02T13:59:28.311Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb {"name":"projects/559153797939/locations/asia-southeast1/instances/twitter-clone-a8055-default-rtdb","project":"projects/559153797939","databaseUrl":"https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-10-02T13:59:28.313Z] >>> [apiv2][query] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2023-10-02T13:59:28.313Z] >>> [apiv2][body] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-10-02T13:59:28.947Z] <<< [apiv2][status] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 401
+[debug] [2023-10-02T13:59:28.948Z] <<< [apiv2][body] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"error":"Unauthorized request."}
+[error] 
+[error] Error: Unexpected error while deploying database rules.
+[debug] [2023-10-02T13:59:49.456Z] ----------------------------------------------------------------------
+[debug] [2023-10-02T13:59:49.458Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\smriti\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-10-02T13:59:49.459Z] CLI Version:   12.6.1
+[debug] [2023-10-02T13:59:49.459Z] Platform:      win32
+[debug] [2023-10-02T13:59:49.459Z] Node Version:  v16.16.0
+[debug] [2023-10-02T13:59:49.460Z] Time:          Mon Oct 02 2023 19:29:49 GMT+0530 (India Standard Time)
+[debug] [2023-10-02T13:59:49.460Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-02T13:59:49.535Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-02T13:59:49.536Z] > authorizing via signed-in user (smritigangwark9@gmail.com)
+[debug] [2023-10-02T13:59:49.536Z] [iam] checking project twitter-clone-a8055 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-10-02T13:59:49.538Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions [none]
+[debug] [2023-10-02T13:59:49.538Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions x-goog-quota-user=projects/twitter-clone-a8055
+[debug] [2023-10-02T13:59:49.539Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-02T13:59:50.409Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions 200
+[debug] [2023-10-02T13:59:50.410Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-02T13:59:50.412Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 [none]
+[debug] [2023-10-02T13:59:51.014Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 200
+[debug] [2023-10-02T13:59:51.015Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 {"projectId":"twitter-clone-a8055","projectNumber":"559153797939","displayName":"twitter-clone","name":"projects/twitter-clone-a8055","resources":{"hostingSite":"twitter-clone-a8055","realtimeDatabaseInstance":"twitter-clone-a8055-default-rtdb","storageBucket":"twitter-clone-a8055.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2b6096e8-4ed5-4fb1-a6ac-b996cdf17ead"}
+[debug] [2023-10-02T13:59:51.015Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 [none]
+[debug] [2023-10-02T13:59:51.634Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 200
+[debug] [2023-10-02T13:59:51.634Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 {"projectId":"twitter-clone-a8055","projectNumber":"559153797939","displayName":"twitter-clone","name":"projects/twitter-clone-a8055","resources":{"hostingSite":"twitter-clone-a8055","realtimeDatabaseInstance":"twitter-clone-a8055-default-rtdb","storageBucket":"twitter-clone-a8055.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2b6096e8-4ed5-4fb1-a6ac-b996cdf17ead"}
+[info] 
+[info] === Deploying to 'twitter-clone-a8055'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2023-10-02T13:59:51.779Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb [none]
+[debug] [2023-10-02T13:59:53.944Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb 200
+[debug] [2023-10-02T13:59:53.944Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb {"name":"projects/559153797939/locations/asia-southeast1/instances/twitter-clone-a8055-default-rtdb","project":"projects/559153797939","databaseUrl":"https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-10-02T13:59:53.946Z] >>> [apiv2][query] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2023-10-02T13:59:53.946Z] >>> [apiv2][body] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-10-02T13:59:54.342Z] <<< [apiv2][status] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 401
+[debug] [2023-10-02T13:59:54.342Z] <<< [apiv2][body] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"error":"Unauthorized request."}
+[error] 
+[error] Error: Unexpected error while deploying database rules.
+[debug] [2023-10-02T14:07:14.822Z] ----------------------------------------------------------------------
+[debug] [2023-10-02T14:07:14.824Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\smriti\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-10-02T14:07:14.825Z] CLI Version:   12.6.1
+[debug] [2023-10-02T14:07:14.825Z] Platform:      win32
+[debug] [2023-10-02T14:07:14.825Z] Node Version:  v16.16.0
+[debug] [2023-10-02T14:07:14.826Z] Time:          Mon Oct 02 2023 19:37:14 GMT+0530 (India Standard Time)
+[debug] [2023-10-02T14:07:14.826Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-02T14:07:14.903Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-02T14:07:14.904Z] > authorizing via signed-in user (smritigangwark9@gmail.com)
+[debug] [2023-10-02T14:07:14.904Z] [iam] checking project twitter-clone-a8055 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-10-02T14:07:14.906Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions [none]
+[debug] [2023-10-02T14:07:14.906Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions x-goog-quota-user=projects/twitter-clone-a8055
+[debug] [2023-10-02T14:07:14.906Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-02T14:07:16.995Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions 200
+[debug] [2023-10-02T14:07:16.996Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-02T14:07:16.998Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 [none]
+[debug] [2023-10-02T14:07:17.744Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 200
+[debug] [2023-10-02T14:07:17.744Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 {"projectId":"twitter-clone-a8055","projectNumber":"559153797939","displayName":"twitter-clone","name":"projects/twitter-clone-a8055","resources":{"hostingSite":"twitter-clone-a8055","realtimeDatabaseInstance":"twitter-clone-a8055-default-rtdb","storageBucket":"twitter-clone-a8055.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2b6096e8-4ed5-4fb1-a6ac-b996cdf17ead"}
+[debug] [2023-10-02T14:07:17.745Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 [none]
+[debug] [2023-10-02T14:07:18.519Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 200
+[debug] [2023-10-02T14:07:18.519Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 {"projectId":"twitter-clone-a8055","projectNumber":"559153797939","displayName":"twitter-clone","name":"projects/twitter-clone-a8055","resources":{"hostingSite":"twitter-clone-a8055","realtimeDatabaseInstance":"twitter-clone-a8055-default-rtdb","storageBucket":"twitter-clone-a8055.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2b6096e8-4ed5-4fb1-a6ac-b996cdf17ead"}
+[info] 
+[info] === Deploying to 'twitter-clone-a8055'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2023-10-02T14:07:18.526Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb [none]
+[debug] [2023-10-02T14:07:21.083Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb 200
+[debug] [2023-10-02T14:07:21.083Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb {"name":"projects/559153797939/locations/asia-southeast1/instances/twitter-clone-a8055-default-rtdb","project":"projects/559153797939","databaseUrl":"https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-10-02T14:07:21.084Z] >>> [apiv2][query] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2023-10-02T14:07:21.084Z] >>> [apiv2][body] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-10-02T14:07:21.961Z] <<< [apiv2][status] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 401
+[debug] [2023-10-02T14:07:21.961Z] <<< [apiv2][body] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"error":"Unauthorized request."}
+[error] 
+[error] Error: Unexpected error while deploying database rules.
+[debug] [2023-10-02T14:09:36.800Z] ----------------------------------------------------------------------
+[debug] [2023-10-02T14:09:36.802Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\smriti\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-10-02T14:09:36.802Z] CLI Version:   12.6.1
+[debug] [2023-10-02T14:09:36.802Z] Platform:      win32
+[debug] [2023-10-02T14:09:36.802Z] Node Version:  v16.16.0
+[debug] [2023-10-02T14:09:36.803Z] Time:          Mon Oct 02 2023 19:39:36 GMT+0530 (India Standard Time)
+[debug] [2023-10-02T14:09:36.803Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-02T14:09:36.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-02T14:09:36.874Z] > authorizing via signed-in user (smritigangwark9@gmail.com)
+[debug] [2023-10-02T14:09:36.874Z] [iam] checking project twitter-clone-a8055 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-10-02T14:09:36.877Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions [none]
+[debug] [2023-10-02T14:09:36.877Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions x-goog-quota-user=projects/twitter-clone-a8055
+[debug] [2023-10-02T14:09:36.877Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-02T14:09:39.001Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions 200
+[debug] [2023-10-02T14:09:39.003Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitter-clone-a8055:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-10-02T14:09:39.005Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 [none]
+[debug] [2023-10-02T14:09:39.960Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 200
+[debug] [2023-10-02T14:09:39.960Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 {"projectId":"twitter-clone-a8055","projectNumber":"559153797939","displayName":"twitter-clone","name":"projects/twitter-clone-a8055","resources":{"hostingSite":"twitter-clone-a8055","realtimeDatabaseInstance":"twitter-clone-a8055-default-rtdb","storageBucket":"twitter-clone-a8055.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2b6096e8-4ed5-4fb1-a6ac-b996cdf17ead"}
+[debug] [2023-10-02T14:09:39.961Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 [none]
+[debug] [2023-10-02T14:09:40.948Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 200
+[debug] [2023-10-02T14:09:40.948Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitter-clone-a8055 {"projectId":"twitter-clone-a8055","projectNumber":"559153797939","displayName":"twitter-clone","name":"projects/twitter-clone-a8055","resources":{"hostingSite":"twitter-clone-a8055","realtimeDatabaseInstance":"twitter-clone-a8055-default-rtdb","storageBucket":"twitter-clone-a8055.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2b6096e8-4ed5-4fb1-a6ac-b996cdf17ead"}
+[info] 
+[info] === Deploying to 'twitter-clone-a8055'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2023-10-02T14:09:40.955Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb [none]
+[debug] [2023-10-02T14:09:42.980Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb 200
+[debug] [2023-10-02T14:09:42.980Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/twitter-clone-a8055/locations/-/instances/twitter-clone-a8055-default-rtdb {"name":"projects/559153797939/locations/asia-southeast1/instances/twitter-clone-a8055-default-rtdb","project":"projects/559153797939","databaseUrl":"https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-10-02T14:09:42.982Z] >>> [apiv2][query] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2023-10-02T14:09:42.982Z] >>> [apiv2][body] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-10-02T14:09:43.368Z] <<< [apiv2][status] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 401
+[debug] [2023-10-02T14:09:43.368Z] <<< [apiv2][body] PUT https://twitter-clone-a8055-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"error":"Unauthorized request."}
+[error] 
+[error] Error: Unexpected error while deploying database rules.
